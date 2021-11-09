@@ -5,6 +5,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 export const initSwagger = (app: INestApplication) => {
   const swaggerConfig = new DocumentBuilder()
     .setTitle('FacturaXpress Backend')
+    .addBearerAuth()
     .setDescription('Backend por yo merito uwu')
     .build();
   const document = SwaggerModule.createDocument(app, swaggerConfig);

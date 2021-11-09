@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Usuario } from './user/entities/user_entity';
 import { UserModule } from './user/user.module';
+import { CarteraModule } from './cartera/cartera.module';
+import { Cartera } from './cartera/entities/cartera_entity';
 
 @Module({
   imports: [
@@ -15,9 +17,10 @@ import { UserModule } from './user/user.module';
       username: '5nqzZI9sUE',
       password: 'w9VqnpZcIl',
       database: '5nqzZI9sUE',
-      entities: [Usuario],
+      entities: [Usuario, Cartera],
       synchronize: true,
     }),
+    CarteraModule,
   ],
   controllers: [AppController],
   providers: [AppService],
