@@ -14,7 +14,9 @@ export class UserService {
     return await this.userRepository.find();
   }
   async getUserById(id: number) {
-    return await this.userRepository.findOne(id);
+    return await this.userRepository.findOne(id, {
+      relations: ['carteras'],
+    });
   }
   async createUser(user: CreateUserdto) {
     const usuario = this.userRepository.create(user as any);

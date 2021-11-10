@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Cartera } from 'src/cartera/entities/cartera_entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('Usuario')
 export class Usuario {
@@ -10,4 +11,6 @@ export class Usuario {
   NContrasenia: string;
   @Column({ type: 'varchar', length: 40 })
   NCorreo: string;
+  @OneToMany(() => Cartera, (Cartera) => Cartera.CUsuario)
+  carteras: Cartera[];
 }

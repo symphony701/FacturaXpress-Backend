@@ -1,11 +1,22 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { CostosIniciales } from 'src/costo-inicial/entities/costo-inicial_entity';
+import { Factura } from 'src/factura/entities/factura_entity';
+import { Usuario } from 'src/user/entities/user_entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity('Cartera')
 export class Cartera {
   @PrimaryGeneratedColumn()
   CCartera: number;
-  @Column({ type: 'int' })
-  CUsuario: number;
+  @ManyToOne(() => Usuario, (Usuario) => Usuario.carteras)
+  @JoinColumn({ name: 'CUsuario' })
+  CUsuario: Usuario;
   @Column({ type: 'varchar', length: 40 })
   NTipoTasa: string;
   @Column({ type: 'float' })
@@ -22,4 +33,11 @@ export class Cartera {
   NPerioCapital: string;
   @Column({ type: 'int' })
   NumPerioCapital: number;
+  @OneToMany(
+    () => CostosIniciales,
+    (CostosIniciales) => CostosIniciales.CCartera,
+  )
+  costosIniciales: CostosIniciales[];
+  @OneToMany(() => Factura, (Factura) => Factura.CCartera)
+  facturas: Factura[];
 }
