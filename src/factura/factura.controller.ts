@@ -24,4 +24,8 @@ export class FacturaController {
   async addFactura(@Body() factura: CreateFacturaDto) {
     return await this.facturaService.addFactura(factura);
   }
+  @Get('/user/:idUser')
+  async getCarteraByUser(@Param('idUser', ParseIntPipe) idUser: number) {
+    return await this.facturaService.getFacutrasByUser(idUser);
+  }
 }
