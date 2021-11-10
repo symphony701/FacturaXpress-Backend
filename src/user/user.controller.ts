@@ -22,6 +22,13 @@ export class UserController {
   async getUserById(@Param('id', ParseIntPipe) id: number) {
     return await this.userService.getUserById(id);
   }
+  @Get('validation/:user/:password')
+  async validateUser(
+    @Param('user') user: string,
+    @Param('password') password: string,
+  ) {
+    return await this.userService.validateUser(user, password);
+  }
   @Post()
   createUser(@Body() user: CreateUserdto) {
     return this.userService.createUser(user);

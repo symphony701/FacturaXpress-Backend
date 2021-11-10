@@ -20,4 +20,10 @@ export class UserService {
     const usuario = this.userRepository.create(user as any);
     return this.userRepository.save(usuario);
   }
+  async validateUser(user: string, password: string) {
+    return await this.userRepository.find({
+      NUsuario: user,
+      NContrasenia: password,
+    });
+  }
 }
