@@ -1,7 +1,7 @@
 import { Cartera } from 'src/cartera/entities/cartera_entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('Usuario')
+@Entity('usuario')
 export class Usuario {
   @PrimaryGeneratedColumn()
   CUsuario: number;

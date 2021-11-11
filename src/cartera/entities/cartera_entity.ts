@@ -10,7 +10,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity('Cartera')
+@Entity('cartera')
 export class Cartera {
   @PrimaryGeneratedColumn()
   CCartera: number;

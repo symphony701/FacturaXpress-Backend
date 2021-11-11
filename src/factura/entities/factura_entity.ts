@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity('Factura')
+@Entity('factura')
 export class Factura {
   @PrimaryGeneratedColumn()
   CFactura: number;

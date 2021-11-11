@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity('CostosIniciales')
+@Entity('costosiniciales')
 export class CostosIniciales {
   @PrimaryGeneratedColumn()
   CCostoInicial: number;
