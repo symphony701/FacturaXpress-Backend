@@ -35,9 +35,7 @@ export class FacturaService {
       .addSelect('factura.NumVRecibido')
       .addSelect('factura.NumVEntregado')
       .addSelect('factura.NumTCEA')
-      .addSelect('factura.NumVRecibidoTotal')
-      .addSelect('factura.NumTCEATotal')
-      .addSelect('factura.NMotivo')
+      .addSelect('factura.NumPlazoDescuento')
       .where('cartera.CUsuario = :usuario', { usuario: idUser })
       .getMany();
   }

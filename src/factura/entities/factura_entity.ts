@@ -38,10 +38,6 @@ export class Factura {
   NumVEntregado: number;
   @Column({ type: 'float' })
   NumTCEA: number;
-  @Column({ type: 'float' })
-  NumVRecibidoTotal: number;
-  @Column({ type: 'float' })
-  NumTCEATotal: number;
-  @Column({ type: 'varchar', length: 50 })
-  NMotivo: string;
+  @Column({ type: 'int' })
+  NumPlazoDescuento: number;
 }

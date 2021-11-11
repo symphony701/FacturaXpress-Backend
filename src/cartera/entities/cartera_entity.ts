@@ -27,12 +27,12 @@ export class Cartera {
   NumPlazoTasa: number;
   @Column({ type: 'int' })
   NumDiasXAnio: number;
-  @Column({ type: 'int' })
-  NumPlazoDescuento: number;
   @Column({ type: 'varchar', length: 40 })
   NPerioCapital: string;
   @Column({ type: 'int' })
   NumPerioCapital: number;
+  @Column({ type: 'date' })
+  DFechaDescuento: string;
   @OneToMany(
     () => CostosIniciales,
     (CostosIniciales) => CostosIniciales.CCartera,

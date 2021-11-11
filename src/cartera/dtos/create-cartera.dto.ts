@@ -13,10 +13,10 @@ export class CreateCarteraDto {
   NumPlazoTasa: number;
   @IsNumber()
   NumDiasXAnio: number;
-  @IsNumber()
-  NumPlazoDescuento: number;
   @IsString()
   NPerioCapital: string;
   @IsNumber()
   NumPerioCapital: number;
+  @IsString()
+  DFechaDescuento: string;
 }

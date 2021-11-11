@@ -28,9 +28,5 @@ export class CreateFacturaDto {
   @IsNumber()
   NumTCEA: number;
   @IsNumber()
-  NumVRecibidoTotal: number;
-  @IsNumber()
-  NumTCEATotal: number;
-  @IsString()
-  NMotivo: string;
+  NumPlazoDescuento: number;
 }
