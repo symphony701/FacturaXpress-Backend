@@ -1,6 +1,3 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://pbs.twimg.com/profile_images/1384796108912828417/tSQkySJC_400x400.jpg" width="320" alt="Nest Logo" /></a>
-</p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
