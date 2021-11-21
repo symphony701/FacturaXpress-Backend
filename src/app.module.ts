@@ -10,6 +10,8 @@ import { CostoInicialModule } from './costo-inicial/costo-inicial.module';
 import { CostosIniciales } from './costo-inicial/entities/costo-inicial_entity';
 import { FacturaModule } from './factura/factura.module';
 import { Factura } from './factura/entities/factura_entity';
+import { CostoFinalModule } from './costo-final/costo-final.module';
+import { CostosFinales } from './costo-final/entities/costo-inicial_entity';
 
 @Module({
   imports: [
@@ -21,12 +23,13 @@ import { Factura } from './factura/entities/factura_entity';
       username: 'bd417d2ffe5639',
       password: '6958013c',
       database: 'heroku_5378ecdc3fafcd4',
-      entities: [Usuario, Cartera, CostosIniciales, Factura],
+      entities: [Usuario, Cartera, CostosIniciales, Factura, CostosFinales],
       synchronize: true,
     }),
     CarteraModule,
     CostoInicialModule,
     FacturaModule,
+    CostoFinalModule,
   ],
   controllers: [AppController],
   providers: [AppService],

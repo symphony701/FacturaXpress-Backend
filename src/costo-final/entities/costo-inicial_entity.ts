@@ -1,0 +1,23 @@
+import { Cartera } from 'src/cartera/entities/cartera_entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+
+@Entity('costosfinales')
+export class CostosFinales {
+  @PrimaryGeneratedColumn()
+  CCostoFinal: number;
+  @ManyToOne(() => Cartera, (Cartera) => Cartera.costosFinales)
+  @JoinColumn({ name: 'CCartera' })
+  CCartera: number;
+  @Column({ type: 'varchar', length: 50 })
+  NMotivo: string;
+  @Column({ type: 'float' })
+  NumMonto: number;
+  @Column({ type: 'varchar', length: 10 })
+  NMoneda: string;
+}

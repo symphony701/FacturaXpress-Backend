@@ -1,3 +1,4 @@
+import { CostosFinales } from 'src/costo-final/entities/costo-inicial_entity';
 import { CostosIniciales } from 'src/costo-inicial/entities/costo-inicial_entity';
 import { Factura } from 'src/factura/entities/factura_entity';
 import { Usuario } from 'src/user/entities/user_entity';
@@ -40,4 +41,6 @@ export class Cartera {
   costosIniciales: CostosIniciales[];
   @OneToMany(() => Factura, (Factura) => Factura.CCartera)
   facturas: Factura[];
+  @OneToMany(() => CostosFinales, (CostosFinales) => CostosFinales.CCartera)
+  costosFinales: CostosFinales[];
 }
